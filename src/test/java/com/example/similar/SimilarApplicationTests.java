@@ -1,10 +1,10 @@
-package com.jabanto.similar;
+package com.example.similar;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class SimilarApplicationTests {
 
 	@Test
 	void contextLoads() {

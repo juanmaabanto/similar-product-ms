@@ -8,11 +8,11 @@
 		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.jabanto</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>similar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>project to get similar products</description>
+	<name>similar</name>
+	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
