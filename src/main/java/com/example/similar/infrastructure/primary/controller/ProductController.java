@@ -1,5 +1,6 @@
 package com.example.similar.infrastructure.primary.controller;
 
+import com.example.similar.core.FindSimilarProductUseCase;
 import com.example.similar.infrastructure.primary.controller.dto.SimilarProductDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -29,6 +30,8 @@ import static io.swagger.v3.oas.annotations.enums.ParameterIn.PATH;
 @Slf4j
 @Validated
 public class ProductController {
+
+    private final FindSimilarProductUseCase useCase;
 
     @Operation(summary = "Find similar products.", description = "Find similar products.")
     @Parameters(
@@ -70,6 +73,11 @@ public class ProductController {
     )
     @GetMapping(value = "{productId}/similar", produces = MediaType.APPLICATION_JSON_VALUE)
     public Flux<SimilarProductDto> findSimilarProducts(@NotNull @PathVariable("productId") String productId) {
-        return Flux.just(new SimilarProductDto("1", "product 1", 100, true));
+        return useCase.handle(productId).map(product -> new SimilarProductDto(
+                product.getId(),
+                product.getName(),
+                product.getPrice(),
+                product.getAvailability()
+        ));
     }
 }
