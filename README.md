@@ -36,4 +36,4 @@ ir a la url: http://localhost:5000/product/1/similar
 
 ### test
 
-![List](https://github.com/juanmaabanto/sales-app/blob/main/screenshots/img.png)
+![List](https://github.com/juanmaabanto/similar-product-ms/blob/main/screenshots/img.png)
